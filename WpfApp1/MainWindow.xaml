@@ -1,0 +1,110 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Рецепты бывалой хозяюшки" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <GridSplitter Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,0" Width="3"/>
+
+        <FlowDocumentReader x:Name="flowDocReader" Grid.Column="1">
+            <FlowDocument>
+                <Paragraph>
+                    <Bold>
+                        <Run Text="Классический самогон"/>
+                    </Bold>
+                </Paragraph>
+                <Table>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell RowSpan="3">
+                                <Paragraph TextAlignment="Left">
+                                    <InlineUIContainer>
+                                        <Image Source="/1.jpg"/>
+                                    </InlineUIContainer>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph TextAlignment="Left">
+                                    <Run Text="Дрожжи - 100 гр"/>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph TextAlignment="Left">
+                                    <Run Text="Сахар - 1 кг"/>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph TextAlignment="Left">
+                                    <Run Text="Вода - 4 л"/>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+
+                <Paragraph>
+                    <Bold>
+                        <Run Text="Шаг 1"/>
+                    </Bold>
+                </Paragraph>
+                <Paragraph>
+                    <Run Text="Как сделать самогон из сахара и дрожжей? Подготовьте все необходимые ингредиенты. Дрожжи должны быть очень свежими (смотрите дату производства). Можно взять и сухие спиртовые дрожжи, которые продаются в специализированных магазинах для виноделия и самогоноварения. Пропорции уточняйте на упаковке. Винные дрожжи для самогона не подходят."/>
+                </Paragraph>
+
+                <Paragraph>
+                    <Bold>
+                        <Run Text="Шаг 2"/>
+                    </Bold>
+                </Paragraph>
+                <Paragraph>
+                    <Run Text="Дрожжи разломайте руками на небольшие кусочки. Добавьте 1 столовую ложку сахара."/>
+                </Paragraph>
+
+                <Paragraph>
+                    <Bold>
+                        <Run Text="Шаг 3"/>
+                    </Bold>
+                </Paragraph>
+                <Paragraph>
+                    <Run Text="Влейте 100 мл теплой воды. Вода должна быть не выше 40 градусов, температура выше может убить дрожжи и брожения не будет. Кроме этого вода должна быть нефильтрованная, чтобы в ней находились микроорганизмы."/>
+                </Paragraph>
+
+                <Paragraph>
+                    <Bold>
+                        <Run Text="Шаг 4"/>
+                    </Bold>
+                </Paragraph>
+                <Paragraph>
+                    <Run Text="Дождитесь образования пенной шапочки и влейте дрожжевую смесь в большую емкость для браги."/>
+                </Paragraph>
+
+                <Paragraph>
+                    <Bold>
+                        <Run Text="Шаг 5..."/>
+                    </Bold>
+                </Paragraph>
+                <Paragraph>
+                    <Run Text="Добавьте оставшийся сахар. .... Получите самогон и пейте его"/>
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentReader>
+
+        <ListBox Name="listRecipes" SelectedIndex="0" SelectionChanged="ListBox_SelectionChanged">
+            <ListBoxItem>Классический самогон</ListBoxItem>
+            <ListBoxItem>Самогон из яблок</ListBoxItem>
+        </ListBox>
+
+    </Grid>
+</Window>
+
